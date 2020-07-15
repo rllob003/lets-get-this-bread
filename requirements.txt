@@ -1,13 +1,14 @@
 click==7.1.2
+enum-compat==0.0.2
 enum34==1.1.6
 eventlet==0.25.2
 Flask==1.1.2
-get==2019.4.13
+Flask-SocketIO==2.9.1
 gevent==20.6.2
+gevent-websocket==0.10.1
 greenlet==0.4.16
 gunicorn @ git+https://github.com/benoitc/gunicorn.git@5001de6070eca436db5ecad96f5a521f6db33342
-idna==2.9
-importlib-metadata==1.5.0
+itsdangerous==0.24
 imutils==0.5.3
 Jinja2==2.11.1
 MarkupSafe==1.1.1
@@ -16,13 +17,10 @@ olefile==0.46
 opencv-contrib-python==4.3.0.36
 opencv-python==4.3.0.36
 Pillow==7.0.0
-pipenv==2020.6.2
-post==2019.4.13
-psutil==5.6.7
-python-dateutil==2.8.1
+python-engineio==1.7.0
+python-socketio==1.7.7
+redis==2.10.5
 six==1.14.0
-virtualenv==20.0.26
-virtualenv-clone==0.5.4
 wcwidth==0.1.8
 webencodings==0.5.1
 websocket-client==0.57.0
