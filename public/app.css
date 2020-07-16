@@ -40,16 +40,21 @@ input[type=radio]:focus + label:before,
 input[type=checkbox]:focus + label:before {
   outline: 0;
 }
+.logo {
+  width: 300px;
+  display: block;
+  margin: auto;
+}
 .btn {
   font-size: 100%;
   text-transform: uppercase;
   letter-spacing: 1px;
   border: 0;
-  background-color: #16214D;
+  background-color: #363638;
   color: white;
 }
 .btn:hover {
-  background-color: #44C7F4;
+  background-color: #1d367a;
 }
 .btn:focus {
   outline: none !important;
