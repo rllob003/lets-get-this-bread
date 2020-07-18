@@ -105,7 +105,7 @@ def dashboard():
                            userinfo_pretty=json.dumps(session[constants.JWT_PAYLOAD], indent=4))
 
                            
-@app.route('/stream', methods=['POST'])
+@app.route('/stream')
 def stream():
     return render_template('stream.html')
 
