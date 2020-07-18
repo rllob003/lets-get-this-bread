@@ -1,8 +1,81 @@
-<html>
- <head>
- <title>Webcam Test</title>
- </head>
- <body>
- <video id="stream" width="640" height="480" src="http://localhost:8080/stream" type="video/ogg; codecs=theora" autoplay="autoplay"/>
- </body>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Live Stream</title>
+</head>
+<style>
+    video {
+        width: 650px;
+        height: 480px;
+        transform: rotate(180deg);
+    }
+    
+    h1 {
+        padding-top: 5px;
+        padding-right: 20px;
+        padding-left: 35%;
+        margin-left: 10%;
+        margin-top: 2%;
+        margin-right: 20%;
+    }
+    
+    .streamContainer {
+        border: 4px solid black;
+        background-color: lightgrey;
+        width: 650px;
+        /* margin: 2rem auto; */
+        overflow: auto;
+        /* padding: 0 2rem; */
+        padding: 10px;
+        /* margin: auto; */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hidden {
+        display: none;
+    }
+</style>
+
+<body>
+    <h1>Live video stream</h1>
+    <div class="conainer">
+        <div class="streamContainer">
+            <video id="stream" src="http://cgwebstream.servehttp.com:8083/stream.ogg" type="video/ogg; codecs=theora" autoplay="autoplay" />
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-input">
+            <div class="container">
+                <div id="newpost" class="hidden">
+                    <input type="button" onclick="location.href='https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/mixed-content.html' ; " value="how to enable mixed content" class="btn" />
+                    <h5 style="color: red;" class="container">
+                        Might need to enable mixed content click above to get instructions on how to do it. Adobe might displays "forbiden" error refresh adobe page and it should display. Click button below to hide this message
+                    </h5>
+                </div>
+            </div>
+
+            <button style="font-size: medium; color: red" id="button" onclick="showhide()" class="btn">FIRST TIME USERS CLICK HERE</button>
+
+            <script>
+                function showhide() {
+                    var div = document.getElementById("newpost");
+                    div.classList.toggle("hidden");
+                }
+            </script>
+
+            <form action="/stream_stati" method="POST">
+                <button name="back" type="submit" class="btn">back</button>
+            </form>
+        </div>
+    </div>
+</body>
+
 </html>
