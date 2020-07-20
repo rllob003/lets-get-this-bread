@@ -3,4 +3,9 @@
 .directory
 .idea
 1.env
+<<<<<<< HEAD
 .env
+=======
+venv
+.vscode
+>>>>>>> 08a1f8349e4d8f217ceb4d32739f569923bf9fe1
