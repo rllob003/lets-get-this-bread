@@ -3,3 +3,5 @@
 .directory
 .idea
 1.env
+venv
+.vscode
