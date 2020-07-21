@@ -3,6 +3,10 @@
 .directory
 .idea
 1.env
+.env
 venv
 .vscode
+<<<<<<< HEAD
 __pycache__
+=======
+>>>>>>> jacky
