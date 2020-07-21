@@ -6,11 +6,5 @@ AUTH0_CALLBACK_URL = 'AUTH0_CALLBACK_URL'
 AUTH0_DOMAIN = 'AUTH0_DOMAIN'
 AUTH0_AUDIENCE = 'AUTH0_AUDIENCE'
 PROFILE_KEY = 'profile'
-<<<<<<< HEAD
-SECRET_KEY = 'thisisasecretkey'
-JWT_PAYLOAD = 'jwt_payload'
-
-=======
 SECRET_KEY = 'ThisIsTheSecretKey'
 JWT_PAYLOAD = 'jwt_payload'
->>>>>>> 08a1f8349e4d8f217ceb4d32739f569923bf9fe1
