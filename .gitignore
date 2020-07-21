@@ -2,7 +2,8 @@
 *.iml
 .directory
 .idea
-1.env
+*.env
 .env
 venv
 .vscode
+constants.py
