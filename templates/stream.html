@@ -40,7 +40,8 @@
 <body>
     <h1>Live Stream</h1>
         <div class="streamContainer">
-            <video id="stream" src="http://cgwebstream.servehttp.com:8083/stream.ogg" type="video/ogg; codecs=theora" autoplay="autoplay" />
+           <!--  <video id="stream" src="http://cgwebstream.servehttp.com:8083/stream.ogg" type="video/ogg; codecs=theora" autoplay="autoplay" /> -->
+           <img src="{{ url_for('video_feed') }}">
         </div>
 </body>
 </html>
