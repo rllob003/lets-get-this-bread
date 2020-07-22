@@ -2,6 +2,7 @@ from functools import wraps
 import json
 from os import environ as env
 from werkzeug.exceptions import HTTPException
+import cv2
 
 from dotenv import load_dotenv, find_dotenv
 from flask import Flask
@@ -29,7 +30,6 @@ AUTH0_AUDIENCE = env.get(constants.AUTH0_AUDIENCE)
 app = Flask(__name__, static_url_path='/public', static_folder='./public')
 app.secret_key = constants.SECRET_KEY
 app.debug = True
-
 
 @app.errorhandler(Exception)
 def handle_auth_error(ex):
@@ -101,7 +101,6 @@ def dashboard():
     return render_template('dashboard.html',
                            userinfo=session[constants.PROFILE_KEY],
                            userinfo_pretty=json.dumps(session[constants.JWT_PAYLOAD], indent=4))
-
                            
 @app.route('/stream')
 def stream():
