@@ -7,9 +7,4 @@ eventlet==0.25.2
 gunicorn @ git+https://github.com/benoitc/gunicorn.git@5001de6070eca436db5ecad96f5a521f6db33342
 Jinja2==2.11.1
 MarkupSafe==1.1.1
-<<<<<<< HEAD
 Werkzeug==1.0.1
-=======
-Werkzeug==1.0.1
-opencv-python==4.3.0.36
->>>>>>> 371535172d6e66f6b8edb0ebeafe5211e6b7f62d
