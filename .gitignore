@@ -7,3 +7,4 @@
 venv
 .vscode
 constants.py
+__pycache__
