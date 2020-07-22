@@ -2,7 +2,6 @@ from functools import wraps
 import json
 from os import environ as env
 from werkzeug.exceptions import HTTPException
-import cv2
 
 from dotenv import load_dotenv, find_dotenv
 from flask import Flask
