@@ -102,7 +102,7 @@ def dashboard():
                            userinfo=session[constants.PROFILE_KEY],
                            userinfo_pretty=json.dumps(session[constants.JWT_PAYLOAD], indent=4))
 
-                           
+
 @app.route('/stream')
 def stream():
     return render_template('stream.html')
@@ -110,4 +110,3 @@ def stream():
 
 if __name__ == "__main__":
     app.run()
-
