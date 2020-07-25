@@ -4,3 +4,9 @@
 .idea
 1.env
 .env
+<<<<<<< HEAD
+=======
+venv
+.vscode
+__pycache__
+>>>>>>> Gabby-Working
