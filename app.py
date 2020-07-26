@@ -22,7 +22,7 @@ app.debug = True
 
 # Controllers API
 
-@app.route('/static')
+@app.route('/')
 def static_feed():
     return render_template('static.html')
 
