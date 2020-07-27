@@ -102,6 +102,9 @@ def dashboard():
                            userinfo=session[constants.PROFILE_KEY],
                            userinfo_pretty=json.dumps(session[constants.JWT_PAYLOAD], indent=4))
 
+@app.route('/video')
+def video():
+    return render_template('videotest.html')
 
 @app.route('/stream')
 def stream():
