@@ -104,7 +104,7 @@ def dashboard():
 
 @app.route('/video')
 def video():
-    return render_template('videotest.html')
+    return redirect('videotest.html')
 
 @app.route('/stream')
 def stream():
