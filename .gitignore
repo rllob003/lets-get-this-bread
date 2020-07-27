@@ -2,11 +2,12 @@
 *.iml
 .directory
 .idea
-1.env
+*.env
 .env
 <<<<<<< HEAD
 =======
 venv
 .vscode
+constants.py
 __pycache__
 >>>>>>> Gabby-Working
