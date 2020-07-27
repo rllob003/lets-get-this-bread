@@ -85,7 +85,7 @@ def callback_handling():
 
 @app.route('/login')
 def login():
-    return auth0.authorize_redirect(redirect_uri=AUTH0_CALLBACK_URL, audience=AUTH0_AUDIENCE)
+    return redirect('/dashboard')
 
 
 @app.route('/logout')
@@ -96,11 +96,8 @@ def logout():
 
 
 @app.route('/dashboard')
-@requires_auth
 def dashboard():
-    return render_template('dashboard.html',
-                           userinfo=session[constants.PROFILE_KEY],
-                           userinfo_pretty=json.dumps(session[constants.JWT_PAYLOAD], indent=4))
+    return render_template('dashboard.html')
 
                            
 @app.route('/stream')
