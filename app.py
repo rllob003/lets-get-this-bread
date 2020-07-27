@@ -96,16 +96,10 @@ def logout():
 
 
 @app.route('/dashboard')
-@requires_auth
 def dashboard():
-    return render_template('dashboard.html',
-                           userinfo=session[constants.PROFILE_KEY],
-                           userinfo_pretty=json.dumps(session[constants.JWT_PAYLOAD], indent=4))
+    return render_template('dashboard.html')
 
-@app.route('/video')
-def video():
-    return redirect('videotest.html')
-
+                           
 @app.route('/stream')
 def stream():
     return render_template('stream.html')
@@ -113,3 +107,4 @@ def stream():
 
 if __name__ == "__main__":
     app.run()
+
