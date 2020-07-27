@@ -99,7 +99,10 @@ def logout():
 def dashboard():
     return render_template('dashboard.html')
 
-                           
+@app.route('/video')
+def video():
+    return redirect('videotest.html')
+
 @app.route('/stream')
 def stream():
     return render_template('stream.html')
@@ -107,4 +110,3 @@ def stream():
 
 if __name__ == "__main__":
     app.run()
-
