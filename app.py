@@ -97,8 +97,11 @@ def logout():
 
 
 @app.route('/dashboard')
+@requires_auth
 def dashboard():
-    return render_template('dashboard.html')
+    return render_template('dashboard.html',
+                           userinfo=session[constants.PROFILE_KEY],
+                           userinfo_pretty=json.dumps(session[constants.JWT_PAYLOAD], indent=4))
 
 @app.route('/video')
 def video():
