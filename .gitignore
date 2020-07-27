@@ -11,3 +11,4 @@ venv
 constants.py
 __pycache__
 >>>>>>> Gabby-Working
+.DS_Store
