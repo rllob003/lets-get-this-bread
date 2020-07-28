@@ -26,7 +26,7 @@ AUTH0_DOMAIN = env.get(constants.AUTH0_DOMAIN)
 AUTH0_BASE_URL = 'https://' + AUTH0_DOMAIN
 AUTH0_AUDIENCE = env.get(constants.AUTH0_AUDIENCE)
 
-app = Flask(__name__, static_url_path='/public', static_folder='./public')
+app = Flask(_name_, static_url_path='/public', static_folder='./public')
 app.secret_key = constants.SECRET_KEY
 app.debug = True
 
@@ -96,8 +96,11 @@ def logout():
 
 
 @app.route('/dashboard')
+@requires_auth
 def dashboard():
-    return render_template('dashboard.html')
+    return render_template('dashboard.html',
+                           userinfo=session[constants.PROFILE_KEY],
+                           userinfo_pretty=json.dumps(session[constants.JWT_PAYLOAD], indent=4))
 
                            
 @app.route('/stream')
@@ -105,6 +108,5 @@ def stream():
     return render_template('stream.html')
 
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     app.run()
-
