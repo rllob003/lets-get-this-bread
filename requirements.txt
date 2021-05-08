@@ -3,7 +3,7 @@ python-dotenv
 requests
 authlib>=0.14.1
 six
-eventlet==0.25.2
+eventlet==0.31.0
 gunicorn @ git+https://github.com/benoitc/gunicorn.git@5001de6070eca436db5ecad96f5a521f6db33342
 Jinja2==2.11.1
 MarkupSafe==1.1.1
